@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless Electronic Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Wireless Notice Board</div>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#literature">Literature Survey</a></li>
+            <li><a href="#block-diagram">Block Diagram</a></li>
+            <li><a href="#hardware-software">Details</a></li>
+            <li><a href="#simulation">Simulation</a></li>
+            <li><a href="#outline">Outline</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="header">
+        <div class="header-content">
+            <h2>Wireless Electronic Notice Board using <br> Arduino and HC-05 Bluetooth Module </h2>
+            <p>Revolutionizing Communication through Technology</p>
+            <a href="#objective" class="btn">Explore More</a>
+        </div>
+    </header>
+
+    <!-- Objective Section -->
+    <section id="objective" class="section">
+        <h2>Objective</h2>
+        <p>The main objective of the project is to develop a wireless 
+            notice board that display messages sent from the webserver. When a 
+            user sends a message, it is received by a wifi Module through Local 
+            Web Server. This project aims to develop a wireless display board that 
+            displays messages sent via Local Webpage through WIFI network. The 
+            main purposes to design this electronic notice board system is to 
+            interface it with users mobile phones for displaying the latest 
+            information. This proposed system in this paper has many upcoming 
+            applications in educational institutions and organizations , crime 
+            prevention , traffic management , railways , advertisements etc. Been 
+            user friendly, long range and faster means of conveying information are 
+            major bolsters for this application. By using this proposed 
+            methodology we can enhance the security system and also make 
+            awareness of the emergency situations and avoid many dangers. For this 
+            purpose, Android based application programs for Bluetooth and Wi-Fi 
+            communication between Android based personal digital assistant devices 
+            and remote wireless display board are used Using the developed system, 
+            two different applications for displaying messages on a remote digital 
+            notice board and wireless person calling has been implemented. It also 
+            helps in saving the time and the cost for paper and printing hardware.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About the Project</h2>
+        <p>The main objective of the project is to develop a wireless 
+            notice board that display messages sent from the webserver. When a 
+            user sends a message, it is received by a wifi Module through Local 
+            Web Server. This project aims to develop a wireless display board that 
+            displays messages sent via Local Webpage through WIFI network. The 
+            main purposes to design this electronic notice board system is to 
+            interface it with users mobile phones for displaying the latest 
+            information. This proposed system in this paper has many upcoming 
+            applications in educational institutions and organizations , crime 
+            prevention , traffic management , railways , advertisements etc. Been 
+            user friendly, long range and faster means of conveying information are 
+            major bolsters for this application. By using this proposed 
+            methodology we can enhance the security system and also make 
+            awareness of the emergency situations and avoid many dangers. For this 
+            purpose, Android based application programs for Bluetooth and Wi-Fi 
+            communication between Android based personal digital assistant devices 
+            and remote wireless display board are used Using the developed system, 
+            two different applications for displaying messages on a remote digital 
+            notice board and wireless person calling has been implemented. It also 
+            helps in saving the time and the cost for paper and printing hardware.</p>
+    </section>
+
+<!-- Literature Survey Section -->
+<section id="literature" class="section">
+    <h2>Literature Survey</h2>
+    <div class="carousel">
+        <div class="slide active">
+            <h3>Paper 1: Small and Medium Range Wireless Electronic Noticeboard using Bluetooth and ZigBee</h3>
+            <button class="btn more-info" data-info="This paper explores the development of a wireless noticeboard utilizing Bluetooth and ZigBee technologies. It emphasizes data security and authentication in information exchange. The system integrates Atmel's ATmega32 microcontroller and a graphical LCD (KS0108-based 128x64) for display. It analyzes wireless performance parameters like range, bit error rate (BER), RSSI (Received Signal Strength Indicator), signal attenuation, and power consumption. This low-cost, handheld device demonstrates compatibility with both Bluetooth and ZigBee modules to enhance communication efficiency.">More Info</button>
+            <button class="btn read-paper" data-link="https://ieeexplore.ieee.org/document/7955701">Read Paper</button>
+        </div>
+        <div class="slide">
+            <h3>Paper 2: IoT and Bluetooth Enabled Wireless Notice Board</h3>
+            <button class="btn more-info" data-info="This paper explores the development of a wireless noticeboard system integrating Internet of Things (IoT) and Bluetooth technologies. It emphasizes the design of a modern communication platform that allows real-time updates on a display screen via Bluetooth-enabled devices. The system aims to replace traditional noticeboards with a more efficient and user-friendly approach, reducing manual effort and enabling instant information dissemination.">More Info</button>
+            <button class="btn read-paper" data-link="https://ieeexplore.ieee.org/document/10428523">Read Paper</button>
+        </div>
+    </div>
+    <button class="arrow prev">&lt;</button>
+    <button class="arrow next">&gt;</button>
+</section>
+
+<!-- Popup Modal -->
+<div id="popup-modal" class="popup hidden">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <p id="popup-text"></p>
+    </div>
+</div>
+
+
+
+    <!-- Block Diagram Section -->
+    <section id="block-diagram" class="section">
+        <h2>Block Diagram</h2>
+        <img src="images/Block-diagram.jpg" alt="Block Diagram" class="responsive-img">
+        <h2>Circuit Diagram</h2>
+        <img src="images/Circuit-Diagram.jpg" alt="Circuit Diagram" class="responsive-img">
+    </section>
+
+    <!-- Hardware and Software Section -->
+    <section id="hardware-software" class="section">
+        <h2>Hardware and Software</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Arduino Uno</h3>
+                <img src="images/arduino uno.jpg" alt="Arduino Uno">
+                <button class="btn more-info" data-info="Arduino is an open-source electronics platform based on
+                easy-to-use hardware and software. Arduino boards are able
+                to read inputs - light on a sensor, a finger on a button, or a Twitter message - and
+                turn it into an output - activating a motor
+                turning on an LED, publishing something
+                online. You can tell your board what to do
+                by sending a set of instructions to the
+                microcontroller on the board. To do so you use the
+                Arduino programming language (based on Wiring),
+                and the Arduino Software (IDE), based on Processing.">More Info</button>
+            </div>
+            <div class="card">
+                <h3>HC-05 Bluetooth</h3>
+                <img src="images/HC-05 Bluetooth Module.jpg" alt="HC-05 Bluetooth">
+                <button class="btn more-info" data-info="HC-05 Bluetooth Module is an easy to use
+                Bluetooth SPP (Serial Port Protocol) module
+                ,designed for transparent wireless serial connection
+                setup. Its communication is via serial
+                communication which makes an easy way to
+                interface with controller or PC. HC-05Bluetooth
+                module provides switching mode between master
+                and slave mode which means it able to use neither receiving nor transmitting data">More Info</button>
+            </div>
+            <div class="card">
+                <h3>LCD Display</h3>
+                <img src="images/lcd.jpg" alt="LCD Display">
+                <button class="btn more-info" data-info="LCD 16x2: An LCD (Liquid Crystal Display) screen is an
+                electronic display module and has a wide range of
+                applications. A 16x2 LCD display is very basic module
+                and is very commonly used in various devices and
+                circuits. A 16x2 LCD means it can display 16 characters
+                per line and there are 2 such lines. In this LCD each
+                character is displayed in 5x7 pixel matrix.">More Info</button>
+            </div>
+            <div class="card">
+                <h3>Bread board</h3>
+                <img src="images/breadboard.jpg" alt="bread board">
+                <button class="btn more-info" data-info="Breadboards are temporary work boards for electronic
+                circuits. The general shape of a bread board is Compatible with most
+                breadboards, 24-gauge wire is used to connect circuits;
+                solid wire, not stranded. Sometimes, kits may be
+                available with various colors of fixed lengths to
+                specifically fit breadboards. These are a nice
+                convenience. Breadboard has sets of miniature sockets
+                laid out on a 0.1 inch grid which will accept the
+                manual insertion of component leads and tinned copper
+                wire (TCW) links.">More Info</button>
+            </div>
+            <div class="card">
+                <h3>Jumper wires</h3>
+                <img src="images/jumper-wires.jpg" alt="Jumper wires">
+                <button class="btn more-info" data-info=" A jumper wire is an electric wire that connects remote electric
+                circuits used for printed circuit boards. By
+                attaching a jumper wire on the circuit, it can be
+                short-circuited and short-cut (jump) to the
+                electric circuit.">More Info</button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Simulation Section -->
+<section id="simulation" class="section">
+    <h2>Simulation and Output</h2>
+    <div class="simulation-container">
+        <!-- Left: Code Section -->
+        <div class="simulation-code">
+            <pre>
+#include<LiquidCrystal.h>
+#include<SoftwareSerial.h>
+LiquidCrystal lcd (4, 5, 6, 7, 8, 9);
+SoftwareSerial mySerial (2, 3); //(RX, TX);
+String val = "No Data";
+String oldval;
+String newval = "No Data";
+int i = 0;
+
+void setup() {
+    lcd.begin(16,2);
+    mySerial.begin(9600);
+    Serial.begin(9600);
+    lcd.setCursor(0, 0);
+    lcd.print("Wireless Notice");
+    lcd.setCursor(0, 1);
+    lcd.print(" Board ");
+    delay(3000);
+    lcd.clear();
+    lcd.print("Welcome!");
+}
+
+void loop() {
+    val = mySerial.readString();
+    val.trim();
+    Serial.println(val);
+    if(val != oldval) {
+        newval = val;
+    }
+    lcd.clear();
+    lcd.setCursor(i, 0);
+    lcd.print(newval);
+    i++;
+    if(i >= 15) {
+        i = 0;
+    }
+    val = oldval;
+}
+            </pre>
+        </div>
+
+        <!-- Right: Media Section -->
+        <div class="simulation-media">
+            <img src="images/simulation.png" alt="Simulation Diagram" class="simulation-image">
+            <img src="images/output.jpg" alt="output Diagram" class="output">
+        </div>
+    </div>
+    <p class="simulation-note">This simulation demonstrates the real-time updates on the noticeboard.</p>
+</section>
+
+
+
+    <!-- Description Section -->
+    <section id="outline" class="section">
+        <h2>Outline of the Project</h2>
+        <table class="outline-table">
+            <tr>
+                <th>Description</th>
+                <td>
+                    The Wireless Notice Board project introduces a cutting-edge solution for information dissemination. 
+                    By utilizing Bluetooth technology and Arduino, this system enables seamless transmission of messages to an LED display module, eliminating the need for printed notices. 
+                    It ensures real-time updates, making it ideal for institutions, public spaces, and organizations.
+                </td>
+            </tr>
+            <tr>
+                <th>Outcome</th>
+                <td>
+                    The project successfully demonstrates a modern and efficient communication method. 
+                    It enhances message delivery speed and reliability, reduces manual intervention, and broadens potential applications in sectors like education, traffic management, crime prevention, and public utilities.
+                </td>
+            </tr>
+            <tr>
+                <th>Future Scope</th>
+                <td>
+                    The project can be expanded by integrating Wi-Fi technology to overcome Bluetooth's limited range, enabling widespread usage. 
+                    Additional features like date and time display, simultaneous multiple message broadcasting, and integration with IoT systems can further enhance its utility.
+                </td>
+            </tr>
+            <tr>
+                <th>Applications</th>
+                <td>
+                    - Public places: bus stands, railway stations, airports, shopping malls, parks.<br>
+                    - Educational institutions: schools and colleges.<br>
+                    - Traffic management and crime prevention.<br>
+                    - Advertisements and promotional displays.<br>
+                    - Emergency alerts in crowded areas.
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    
+
+    <!-- References Section -->
+    <section id="references" class="section">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://books.google.co.in/books?id=ljgkCZk06_YC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false" target="_blank">Muhammad Ali Mazidi, Janice G. Mazidi, Rolin D. McKinlay, The 8051 Microcontroller and Embedded Systems Using Assembly and C, 1st Edition, Pearson Education India, 2007.</a></li>
+            <li><a href="https://www.amazon.in/Interworking-Mobile-Networks-Artech-Communications/dp/1580538908" target="_blank">SMS And MMS Interworking In Mobile Networks
+                Arnaud Henry Labordère ,Artech House mobile communications,
+                2004 - Technology & Engineering</a></li>
+                <li><a href="https://www.amazon.in/8051-Microcontroller-Architecture-Programming-Applications/dp/0314201882" target="_blank">Ayala, Kenneth J. (1996), The 8051 MicrocontrollerArchitecture, Programming and Applications, Delmar Publishers, Inc.
+                    India Reprint.</a>
+        </ul>
+    </section>
+</body>
+</html>

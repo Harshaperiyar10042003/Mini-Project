@@ -1,0 +1,468 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+nav {
+    background-image: linear-gradient(to top, #693bd5 0%, #fbc2eb 100%);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.header-content {
+    text-align: center;
+    padding: 4em 2em;
+    opacity: 0.8;
+    background: url('images/backgrd.avif') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 15px;
+    color: rgb(246, 245, 245);
+    animation: bannerFadeIn 3s ease-in-out backwards ;
+}
+
+@keyframes bannerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.header-content p {
+    font-size: 1.5rem;
+    color: rgb(175, 170, 170);
+}
+
+.btn {
+    background: #0072ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Other Sections */
+.carousel, .grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Objective Section */
+#objective {
+    background: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+    color: #333;
+}
+
+#objective h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+#objective p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* About Section */
+#about {
+    background-image: radial-gradient( circle 1180px at -19.5% -13.5%,  rgba(254,160,198,0.99) 0%, rgba(31,47,85,1) 100.2% );
+    color: white;
+}
+
+#about h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#literature {
+    background-image: linear-gradient(109.6deg, rgba(120, 212, 234, 1) 11.2%, rgba(216, 226, 253, 1) 72.1%);
+    color: white;
+    position: relative;
+}
+
+#literature h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 300px;
+    text-align: center;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0072ff;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: #0056b3;
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Block Diagram Section */
+#block-diagram {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(196,158,212,1) 0%, rgba(110,29,29,1) 90% );;
+    color: white;
+}
+
+#block-diagram h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+#block-diagram img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+/* Hardware and Software Section */
+#hardware-software {
+    background-image: linear-gradient( 109.6deg,  rgba(185,212,242,1) 11.2%, rgba(244,210,226,1) 100.3% );
+    color: white;
+}
+
+#hardware-software h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    color: #333;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .btn {
+    margin-top: 10px;
+    background: #0072ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card .btn:hover {
+    background: #0056b3;
+}
+
+/* Simulation Section Styling */
+#simulation {
+    background-image: linear-gradient(109.6deg, rgba(255, 221, 225, 1) 11.2%, rgba(255, 255, 255, 1) 92.2%);
+    color: #333;
+    padding: 50px 0;
+}
+
+#simulation h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.simulation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.simulation-code, .simulation-video {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    margin: 10px;
+}
+
+.simulation-code pre {
+    background: #333;
+    color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+.simulation-media {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    margin: 10px;
+    text-align: center;
+}
+
+.simulation-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+.output {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+
+.simulation-note {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+
+/* Description Section */
+#outline h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+.outline-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.outline-table th, 
+.outline-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.outline-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    width: 20%;
+}
+
+.outline-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.outline-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* References Section */
+#references {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+}
+
+#references h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+#references ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#references ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#references ul li a {
+    color: #00060c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#references ul li a:hover {
+    color: #0056b3;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+}
